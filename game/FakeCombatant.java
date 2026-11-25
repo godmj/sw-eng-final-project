@@ -86,4 +86,11 @@ public class FakeCombatant implements Combatant {
         hp -= real;
         return real;
     }
+
+    @Override
+    public int heal(int amount) {
+        int real = Math.min(amount, maxHp - hp);
+        hp += real;
+        return real;
+    }
 }

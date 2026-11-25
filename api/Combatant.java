@@ -44,4 +44,8 @@ public interface Combatant {
 
     /** 방어를 무시하는 피해 (독·화상 등 지속 피해). 실제로 깎인 양을 돌려준다. */
     int takeTrueDamage(int amount);
+
+    // ---- 회복 ----
+    /** 체력을 회복한다. 최대 체력을 넘지 않으며, 실제로 회복된 양을 돌려준다. */
+    int heal(int amount);
 }

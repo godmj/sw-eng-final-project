@@ -13,10 +13,10 @@ public class CharacterTest {
 		ActionContext ctx = new ActionContext(0, new Random(42));
 		
 		ActionResult r = w.attack(d, ctx);
-		System.out.println(w.getName() + "->" + d.getName() + " : " + r.getDamage() + "데미지, 남은HP" + " " + d.getHp());
+		System.out.println(w.getName() + "->" + d.getName() + " : " + r.getAmount() + "데미지, 남은HP" + " " + d.getHp());
 		
 		r = d.attack(w, ctx);
-		System.out.println(d.getName() + "->" + w.getName() + " : " + r.getDamage() + "데미지, 남은HP" + " " + w.getHp());
+		System.out.println(d.getName() + "->" + w.getName() + " : " + r.getAmount() + "데미지, 남은HP" + " " + w.getHp());
 
 	}
 

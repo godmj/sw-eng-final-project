@@ -56,7 +56,7 @@ public abstract class BaseCharacter implements Combatant {
     }
 
     public ActionResult defend() {
-        return new ActionResult(0, true);   // 2단계에서 채움
+        return ActionResult.defend(getName());   // 2단계에서 채움
     }
 
     public List<SkillInfo> getSkills() {
@@ -64,7 +64,7 @@ public abstract class BaseCharacter implements Combatant {
     }
 
     public ActionResult useSkill(int index, Combatant target, ActionContext ctx) {
-        return new ActionResult(0, false);  // 2단계에서 채움
+        return ActionResult.attack(getName(), null, "스킬", 0, false, false, null);  // 2단계에서 채움
     }
     
     public int takeTrueDamage(int amount) {
@@ -83,7 +83,7 @@ public abstract class BaseCharacter implements Combatant {
         int actual = target.takeDamage(damage);
 
         // 3) 결과 상자에 담아서 돌려주기 (실제 데미지, 명중했음)
-        return new ActionResult(actual, true);
+        return ActionResult.attack(getName(), target.getName(), "공격", actual, true, false, null);
         			
     }
 }

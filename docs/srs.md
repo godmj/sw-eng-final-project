@@ -1,6 +1,6 @@
 # SRS 초안 (v0.1, 2026-11-25)
 
-> 초안입니다. 정찬호님 담당 항목(전투 규칙, 캐릭터 수치)은 합의 후 채웁니다. 마감 날짜는 LearnUS 공지 확인 필요(11/25 vs 11/30).
+> 초안입니다. 정찬호님 담당 항목(전투 규칙, 캐릭터 수치)은 합의 후 채웁니다. 작업명세서 제출 마감은 11/30이며, 제출 후에도 계속 갱신합니다.
 
 ## 1. 개요
 - 목적: Java 콘솔 턴제 RPG. 플레이어 파티가 3개 스테이지의 적을 차례로 쓰러뜨리고 마지막에 왕(드래곤)을 처치하면 클리어.
@@ -40,10 +40,12 @@
 - 입력이 끝나도(파이프 입력 등) 프로그램이 멈추지 않는다(자동 방어).
 - 공통 인터페이스(api/)는 두 사람이 합의한 뒤에만 수정한다.
 
-## 5. 클래스 다이어그램
-채팅에 그린 다이어그램 기준(Game → BattleEngine → ActionChooser / Combatant / BattleListener, 구현체 ConsoleChooser, SimpleEnemyAI, BaseCharacter(Warrior, Dragon), ConsolePrinter).
-- 클래스 목록과 역할은 `design_v0.2.md` 3·4절 참고.
+## 5. 다이어그램
+- 유스케이스 다이어그램: `docs/usecase.svg`
+- 클래스 다이어그램: `docs/class-diagram.svg`
+- 클래스 구조(Game → BattleEngine → ActionChooser / Combatant / BattleListener, 구현체 ConsoleChooser, SimpleEnemyAI, BaseCharacter(Warrior, Dragon), ConsolePrinter).
+- 클래스 목록과 역할은 `docs/design.md` 3·4절 참고.
 
 ## 6. 남은 일
 - 정찬호님 담당 UC-06, UC-07의 상세 규칙(데미지식, 치명타율, 스킬 목록) 채우기.
-- 유스케이스 다이어그램 그림(위 표 기준)과 제출 형식 맞추기.
+- 제출 형식(PDF/Word) 맞추기. 다이어그램은 SVG를 이미지로 넣어서 사용.
